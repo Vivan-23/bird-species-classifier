@@ -110,7 +110,14 @@ pip install -r requirements.txt
 
 ## 6. Commands to Prepare, Train, Evaluate, and Predict
 
-### 6.1 Data Preparation & Integrity Check
+### 6.1 Interactive Jupyter Notebook (Primary Submission Deliverable)
+```powershell
+# Launch the fully executed, self-contained submission notebook
+jupyter notebook Bird_Species_Classification_TT2.ipynb
+```
+Follows the Coursera TT2 presentation layout: Cover/Aim/Classes, Dataset Inspection, Architecture, Empirical Curves, Classification Report, Confusion Matrix, and 8 Visual Prediction Cards with Top-3 Probabilities.
+
+### 6.2 Data Preparation & Integrity Check
 ```powershell
 # Option A: Full download, extraction, and stratified splitting
 python scripts/prepare_data.py configs/config.yaml
@@ -119,31 +126,31 @@ python scripts/prepare_data.py configs/config.yaml
 python scripts/prepare_data.py --verify-only
 ```
 
-### 6.2 Model Training
+### 6.3 Model Training
 ```powershell
 # Trains CNN with automatic checkpointing and history logging
 python src/train.py configs/config.yaml
 ```
 
-### 6.3 Evaluation & Visualization
+### 6.4 Evaluation & Visualization
 ```powershell
 # Evaluates on held-out test set and generates confusion matrix & learning curves
 python src/evaluate.py configs/config.yaml
 ```
 
-### 6.4 Prediction (CLI)
+### 6.5 Prediction (CLI)
 ```powershell
 # Classify an individual image file with top-k predictions
 python src/predict.py --image "data/processed/test/AFRICAN FIREFINCH/train_3_005.jpg" --top_k 3
 ```
 
-### 6.5 Interactive Streamlit Web UI
+### 6.6 Interactive Streamlit Web UI
 ```powershell
 # Launch Streamlit web demonstration
 streamlit run app/streamlit_app.py
 ```
 
-### 6.6 Run Unit Tests
+### 6.7 Run Unit Tests
 ```powershell
 # Run the 11 unit tests covering model, transforms, early stopping, and data integrity
 python -m unittest discover -s tests -p "test_*.py" -v
@@ -153,6 +160,7 @@ python -m unittest discover -s tests -p "test_*.py" -v
 
 ## 7. Checkpoint Placement & Key File Paths
 
+- **Primary Submission Notebook**: `Bird_Species_Classification_TT2.ipynb` (Coursera TT2 Assignment Format)
 - **Trained Model Checkpoint**: `models/best_model.pth`
 - **Configuration File**: `configs/config.yaml`
 - **Dataset Partitions**: `data/processed/{train,val,test}`
