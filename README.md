@@ -144,13 +144,20 @@ python src/evaluate.py configs/config.yaml
 python src/predict.py --image "data/processed/test/AFRICAN FIREFINCH/train_3_005.jpg" --top_k 3
 ```
 
-### 6.6 Interactive Streamlit Web UI
+### 6.6 Desktop Graphical User Interface (GUI)
+Run the native desktop GUI (Tkinter) matching the standalone desktop layout:
+```powershell
+python gui.py
+```
+*(Features: Image canvas preview, "Browse Image...", "Sample Image", "Classify", "Clear", blue prediction header, Top-3 confidence progress bars, and status bar).*
+
+### 6.7 Interactive Streamlit Web UI
 ```powershell
 # Launch Streamlit web demonstration
 streamlit run app/streamlit_app.py
 ```
 
-### 6.7 Run Unit Tests
+### 6.8 Run Unit Tests
 ```powershell
 # Run the 11 unit tests covering model, transforms, early stopping, and data integrity
 python -m unittest discover -s tests -p "test_*.py" -v

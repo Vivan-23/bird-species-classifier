@@ -1,0 +1,9 @@
+{
+  "test_dataset_size": 260,
+  "best_epoch_by_validation_loss": 5,
+  "test_loss": 0.3886231963451092,
+  "accuracy": 0.9730769230769231,
+  "macro_precision": 0.9752342010812776,
+  "macro_recall": 0.973417410176031,
+  "macro_f1": 0.9737149824561533
+}
