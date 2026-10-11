@@ -1,0 +1,66 @@
+# Bird Species Classification Configuration
+
+project:
+  name: "bird-species-classifier"
+  seed: 42
+
+dataset:
+  hf_repo: "chriamue/bird-species-dataset"
+  num_classes: 10
+  image_size: 224
+  train_split: 0.70
+  val_split: 0.15
+  test_split: 0.15
+  data_dir: "data"
+  processed_dir: "data/processed"
+  selected_species:
+    - "ABBOTTS BABBLER"
+    - "ABBOTTS BOOBY"
+    - "ABYSSINIAN GROUND HORNBILL"
+    - "AFRICAN CROWNED CRANE"
+    - "AFRICAN EMERALD CUCKOO"
+    - "AFRICAN FIREFINCH"
+    - "AFRICAN OYSTER CATCHER"
+    - "AFRICAN PIED HORNBILL"
+    - "AFRICAN PYGMY GOOSE"
+    - "ALBATROSS"
+
+model:
+  name: "BirdClassifierCNN"
+  in_channels: 3
+  num_classes: 10
+  dropout_prob: 0.4
+  init_weights: true
+
+training:
+  epochs: 12
+  batch_size: 32
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  scheduler:
+    type: "ReduceLROnPlateau"
+    mode: "min"
+    factor: 0.5
+    patience: 2
+    min_lr: 0.00001
+  early_stopping:
+    enabled: true
+    patience: 4
+    min_delta: 0.001
+  device: "auto"
+  num_workers: 0
+
+paths:
+  checkpoint_dir: "models"
+  best_checkpoint: "models/best_model.pth"
+  results_dir: "results"
+  metrics_file: "results/test_metrics.json"
+  classification_report_file: "results/classification_report.csv"
+  confusion_matrix_file: "results/confusion_matrix.csv"
+  confusion_matrix_plot: "results/confusion_matrix.png"
+  loss_curve_plot: "results/loss_curve.png"
+  accuracy_curve_plot: "results/accuracy_curve.png"
+  history_file: "results/training_history.csv"
+  training_summary_file: "results/training_summary.json"
+  learning_analysis: "results/learning_analysis.md"
+  metadata_file: "data/metadata.json"

@@ -1,0 +1,93 @@
+{
+    "dataset_name": "Bird Species Dataset",
+    "huggingface_url": "https://huggingface.co/datasets/chriamue/bird-species-dataset",
+    "random_seed": 42,
+    "selected_species": [
+        "ABBOTTS BABBLER",
+        "ABBOTTS BOOBY",
+        "ABYSSINIAN GROUND HORNBILL",
+        "AFRICAN CROWNED CRANE",
+        "AFRICAN EMERALD CUCKOO",
+        "AFRICAN FIREFINCH",
+        "AFRICAN OYSTER CATCHER",
+        "AFRICAN PIED HORNBILL",
+        "AFRICAN PYGMY GOOSE",
+        "ALBATROSS"
+    ],
+    "class_to_idx": {
+        "ABBOTTS BABBLER": 0,
+        "ABBOTTS BOOBY": 1,
+        "ABYSSINIAN GROUND HORNBILL": 2,
+        "AFRICAN CROWNED CRANE": 3,
+        "AFRICAN EMERALD CUCKOO": 4,
+        "AFRICAN FIREFINCH": 5,
+        "AFRICAN OYSTER CATCHER": 6,
+        "AFRICAN PIED HORNBILL": 7,
+        "AFRICAN PYGMY GOOSE": 8,
+        "ALBATROSS": 9
+    },
+    "balance_description": "Approximately balanced across 10 species (142 to 197 total images per species)",
+    "partition_methodology": "Consolidated raw species images across source archives and generated a new stratified 70% train / 15% validation / 15% test split using fixed seed 42. Does not preserve original Kaggle/HuggingFace train/valid/test partition boundaries.",
+    "split_ratios": {
+        "train": 0.7,
+        "val": 0.15,
+        "test": 0.15
+    },
+    "split_counts": {
+        "train_total": 1186,
+        "val_total": 255,
+        "test_total": 260,
+        "grand_total": 1701
+    },
+    "per_species_breakdown": {
+        "train": {
+            "ABBOTTS BABBLER": 121,
+            "ABBOTTS BOOBY": 133,
+            "ABYSSINIAN GROUND HORNBILL": 132,
+            "AFRICAN CROWNED CRANE": 101,
+            "AFRICAN EMERALD CUCKOO": 114,
+            "AFRICAN FIREFINCH": 102,
+            "AFRICAN OYSTER CATCHER": 115,
+            "AFRICAN PIED HORNBILL": 137,
+            "AFRICAN PYGMY GOOSE": 132,
+            "ALBATROSS": 99
+        },
+        "val": {
+            "ABBOTTS BABBLER": 26,
+            "ABBOTTS BOOBY": 28,
+            "ABYSSINIAN GROUND HORNBILL": 28,
+            "AFRICAN CROWNED CRANE": 22,
+            "AFRICAN EMERALD CUCKOO": 25,
+            "AFRICAN FIREFINCH": 22,
+            "AFRICAN OYSTER CATCHER": 25,
+            "AFRICAN PIED HORNBILL": 30,
+            "AFRICAN PYGMY GOOSE": 28,
+            "ALBATROSS": 21
+        },
+        "test": {
+            "ABBOTTS BABBLER": 26,
+            "ABBOTTS BOOBY": 29,
+            "ABYSSINIAN GROUND HORNBILL": 29,
+            "AFRICAN CROWNED CRANE": 22,
+            "AFRICAN EMERALD CUCKOO": 25,
+            "AFRICAN FIREFINCH": 23,
+            "AFRICAN OYSTER CATCHER": 25,
+            "AFRICAN PIED HORNBILL": 30,
+            "AFRICAN PYGMY GOOSE": 29,
+            "ALBATROSS": 22
+        }
+    },
+    "verification": {
+        "sha256_verified": true,
+        "total_files_analyzed": 1701,
+        "unique_content_hashes": 1701,
+        "cross_split_duplicates_count": 0,
+        "intra_split_duplicates_count": 0,
+        "disjoint_splits": true,
+        "image_format": "RGB",
+        "target_resolution": [
+            224,
+            224
+        ]
+    }
+}

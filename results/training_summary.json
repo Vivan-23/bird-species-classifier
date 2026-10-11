@@ -1,0 +1,15 @@
+{
+    "total_epochs_scheduled": 12,
+    "epochs_completed": 12,
+    "early_stopping_enabled": true,
+    "early_stopping_triggered": false,
+    "stopped_epoch": null,
+    "stopping_reason": "Completed all 12 scheduled epochs without triggering early stopping (final patience counter: 1/4 after minimum validation loss 0.8883 at epoch 11).",
+    "patience": 4,
+    "min_delta": 0.001,
+    "final_patience_counter": 1,
+    "best_epoch": 11,
+    "best_val_loss": 0.8883,
+    "best_val_acc": 67.06,
+    "total_training_duration_seconds": 936.6
+}

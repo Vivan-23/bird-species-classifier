@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+
+# Virtual environment
+venv/
+.venv/
+env/
+ENV/
+
+# Data and checkpoints (large files)
+data/processed/
+data/raw/
+*.tar.gz
+*.pth
+*.pt
+!models/.gitkeep
+!models/best_model.pth
+
+# Secrets and environment
+.env
+.env.*
+!.env.example
+
+# Results artifacts (ignore temporary or generated caches, but keep repo clean)
+*.log
+.DS_Store
+Thumbs.db
+data/temp*

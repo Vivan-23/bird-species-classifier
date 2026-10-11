@@ -1,0 +1,10 @@
+{
+    "test_dataset_size": 260,
+    "number_of_classes": 10,
+    "best_epoch": 11,
+    "overall_accuracy": 0.6808,
+    "overall_accuracy_percentage": 68.08,
+    "macro_precision": 0.7202,
+    "macro_recall": 0.6753,
+    "macro_f1_score": 0.6703
+}
